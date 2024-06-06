@@ -89,7 +89,7 @@ For this backend you need to install php and mysql.
 ## Usage
 
 | Route | Request Methos | Description | Response code |
-| ------ | | ------ | ------ | ------ |
+| ------ | ------ | ------ | ------ |
 | / | GET , POST | get all resouces resorces bt bonus type , create new bonus type | 200 , 201 , 400 , 500 |    
 
 
@@ -98,8 +98,8 @@ For this backend you need to install php and mysql.
 
 
 <!--variables-->
-[php]: https://img.shields.io/badge/Php-grey?style=for-the-badge&logo=javascript
-[mysql]: https://img.shields.io/badge/Mysql-grey?style=for-the-badge&logo=axios
+[php]: https://img.shields.io/badge/Php-grey?style=for-the-badge&logo=php
+[mysql]: https://img.shields.io/badge/Mysql-grey?style=for-the-badge&logo=mysql
 [php-url]: https://www.php.net/
 [mysql-url]: https://www.mysql.com/
 

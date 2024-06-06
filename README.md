@@ -88,9 +88,19 @@ For this backend you need to install php and mysql.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-| Route | Request Methos | Description | Response code |
-| ------ | ------ | ------ | ------ |
-| / | GET , POST | get all resouces resorces bt bonus type , create new bonus type | 200 , 201 , 400 , 500 |    
+| Route | Request Methos | Description |
+| ----- | -------------- | ----------- | 
+| / | GET , POST | get all resouces resorces by bonus generic type , create new bonus type | 
+| /{id} | GET , DELETE , UPDATE | get single resources , delete single resources , update single resources | 
+| /bonuses | GET , POST | get all resources by specific bonus , create new specific | 
+| /bonuses/{id} | GET , DELETE , UPDATE | get single resources , delete single resources , update single resources | 
+
+| Response Code | Description |
+| ------ | ------ |
+| 200 | OK |
+| 201 | CRETATED |
+| 400 | BAD REQUEST |
+| 500 | IINTERNAL ERROR |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

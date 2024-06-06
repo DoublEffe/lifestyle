@@ -1,9 +1,12 @@
 <?php
 
 class ConnectToDb {
-  public static function connect() {
+  public static function connect($config) {
     try {
-      return new PDO('mysql:host=localhost:3306;dbname=pa', 'root', '');
+      return new PDO(
+        $config['connection'] . 'dbname=' . $config['name'],
+        $config['username'], 
+        $config['password']);
     }
     catch (PDOException $e) { 
       http_response_code(500);

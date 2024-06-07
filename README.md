@@ -85,7 +85,7 @@ For this backend you need to install php and mysql.
 
 | Route | Request Methos | Description |
 | ----- | -------------- | ----------- | 
-| / | GET , POST | get all resouces resorces by bonus generic type , create new bonus type | 
+| / | GET , POST | get all resources by bonus generic type , create new bonus type | 
 | /{id} | GET , DELETE , UPDATE | get single resources , delete single resources , update single resources | 
 | /bonuses | GET , POST | get all resources by specific bonus , create new specific | 
 | /bonuses/{id} | GET , DELETE , UPDATE | get single resources , delete single resources , update single resources | 

@@ -77,7 +77,7 @@
         throw new PDOException('wrong id reference to bonus db');
       }
     }
-
+    // filter by type
     public function typeFilter($name) {
       $query = 'SELECT * FROM bonuses JOIN bonus ON bonus.id = bonuses.bonus_ref WHERE bonus.name = ' . $name;
       $stm = $this->pdo->prepare($query);
@@ -88,7 +88,7 @@
         throw $e;
       }
     }
-
+    //filter between dates
     public function dateFilter($dateS, $dateE) {
       $query = 'SELECT * FROM bonuses WHERE date BETWEEN ' . $dateS . 'AND' . $dateE;
       $stm = $this->pdo->prepare($query);
@@ -99,7 +99,7 @@
         throw $e;
       }
     }
-
+    // get sum
     public function countFilter() {
       $query = 'SELECT SUM(time) FROM bonus';
       $stm = $this->pdo->prepare($query);

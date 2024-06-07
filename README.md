@@ -101,6 +101,7 @@ N.B. to pass prameters to filters route:
 | 200 | OK |
 | 201 | CRETATED |
 | 400 | BAD REQUEST |
+| 404 | NOT FOUND |
 | 500 | INTERNAL ERROR |
 
 

@@ -36,11 +36,6 @@
     </li>
     <li>
       <a href="#usage">Usage</a>
-      <ul>
-        <li><a href="#map">Map</a></li>
-        <li><a href="#search-Bar">Search Bar</a></li>
-        <li><a href="#book-Description">Book Description</a></li>
-      </ul>
     </li> 
   </ol>
 </details>
@@ -97,9 +92,9 @@ For this backend you need to install php and mysql.
 | /filters | GET | filters by bonus type, between date and sum of the time saved |
 
 N.B. to pass prameters to filters route: 
-    * /filters?name="examplename"
-    * /filters?dateS="2024-05-30"&dateE="2024-05-30"
-    * /filters?sum
+* /filters?name="examplename"
+* /filters?dateS="2024-05-30"&dateE="2024-05-30"
+* /filters?sum
 
 | Response Code | Description |
 | ------ | ------ |

@@ -36,7 +36,7 @@ POST http://127.0.0.1:8888/bonuses
 
 {
   "date": "2024-05-30",
-  "bonus_ref": 6,
+  "bonus_ref": 34,
   "sold": 20
 }
 
@@ -51,3 +51,12 @@ PUT http://127.0.0.1:8888/bonuses/9
   "bonus_ref": 7,
   "sold": 60
 }
+
+###
+GET http://127.0.0.1:8888/filters?name="tt"
+
+###
+GET http://127.0.0.1:8888/filters?dateS="2024-05-30"&dateE="2024-05-30"
+
+###
+GET http://127.0.0.1:8888/filters?sum

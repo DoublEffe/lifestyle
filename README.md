@@ -94,13 +94,19 @@ For this backend you need to install php and mysql.
 | /{id} | GET , DELETE , UPDATE | get single resources , delete single resources , update single resources | 
 | /bonuses | GET , POST | get all resources by specific bonus , create new specific | 
 | /bonuses/{id} | GET , DELETE , UPDATE | get single resources , delete single resources , update single resources | 
+| /filters | GET | filters by bonus type, between date and sum of the time saved |
+
+N.B. to pass prameters to filters route: 
+    * /filters?name="examplename"
+    * /filters?dateS="2024-05-30"&dateE="2024-05-30"
+    * /filters?sum
 
 | Response Code | Description |
 | ------ | ------ |
 | 200 | OK |
 | 201 | CRETATED |
 | 400 | BAD REQUEST |
-| 500 | IINTERNAL ERROR |
+| 500 | INTERNAL ERROR |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

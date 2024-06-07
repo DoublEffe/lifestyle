@@ -76,5 +76,41 @@
       } catch (PDOException $e) {
         throw new PDOException('wrong id reference to bonus db');
       }
+    }
+
+    public function typeFilter($name) {
+      $query = 'SELECT * FROM bonuses JOIN bonus ON bonus.id = bonuses.bonus_ref WHERE bonus.name = ' . $name;
+      $stm = $this->pdo->prepare($query);
+      try {
+        $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_CLASS);
+      } catch (PDOException $e) {
+        throw $e;
+      }
+    }
+
+    public function dateFilter($dateS, $dateE) {
+      $query = 'SELECT * FROM bonuses WHERE date BETWEEN ' . $dateS . 'AND' . $dateE;
+      $stm = $this->pdo->prepare($query);
+      try {
+        $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_CLASS);
+      } catch (PDOException $e) {
+        throw $e;
+      }
+    }
+
+    public function countFilter() {
+      $query = 'SELECT SUM(time) FROM bonus';
+      $stm = $this->pdo->prepare($query);
+      try {
+        $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_CLASS);
+      } catch (PDOException $e) {
+        throw $e;
+      }
+    }
   }
-  }
+
+
+  

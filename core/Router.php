@@ -4,7 +4,10 @@
   class Router {
     // all routes, here can be added new routes
     protected $routes = [
-          'bonuses/{id}'=> [
+          'filters{s}' => [
+            'get'=> 'filterhandler',
+          ],   
+          'bonuses/{id}' => [
             'get' => 'getOneHanlder',
             'delete' => 'deleteHandler',
             'put' => 'updateHandler',
@@ -28,6 +31,9 @@
     // redirect normal route or route with query
     public function redirect ($uri,$method){
       foreach ($this->routes as $route => $handler) {
+        if (preg_match('/\{s\}/', $route)) {
+          return $this->callHandler($handler, $method, $id=parse_url($uri)['query'], $uri); 
+        }
         if (preg_match('/\{id\}/', $route)) {
           $routePattern = preg_replace('/\{id\}/', '(\d+)', $route);
           if (preg_match("#^$routePattern$#", $uri, $matches)) {
@@ -43,6 +49,9 @@
     // calling the correct handler from the $routes
     private function callHandler($handlers, $method, $id=null, $uri) {
       if(isset($handlers[$method])) {
+        if(preg_match('/filters(\D+)/', $uri)) {
+          require 'controllers/filters.php';
+        }
         if($uri === 'bonuses' or preg_match('/bonuses\/(\d+)/', $uri)){
           require 'controllers/create-bonuses.php';
         }else{

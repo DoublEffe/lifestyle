@@ -9,13 +9,13 @@
   <p align="center">
     Backend for public services.
     <br />
-    <a href=""><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/DoublEffe/lifestyle"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
-    <a href="">Report Bug</a>
+    <a href="https://github.com/DoublEffe/lifestyle/issues">Report Bug</a>
     ·
-    <a href="">Request Feature</a>
+    <a href="https://github.com/DoublEffe/lifestyle/issues">Request Feature</a>
   </p>
 </div>
 
